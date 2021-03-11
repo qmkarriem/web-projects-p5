@@ -36,19 +36,20 @@ function setup() {
 	let clientWidth = document.body.clientWidth;
 	createCanvas(clientWidth, clientHeight); 
     //creates an HTML <canvas> element. defaults to 100x100 if not declared. Often we use numbers for this. But note that the canvas is an HTML element and we can set it with JS variables & treat it like any other HTML element. Because HTML canvas exists independently of p5.js, which is giving us tools to make it easier and more expressive to work with. 
-	
-    background(0);
+	frameRate(60);
+    
     
 }
 
 function draw() {
+    background(255);
     fill(20,20, 100);
-    rect(400, 150, 100, 100);
+    
     fill(20,200,100, 45);
           
-    stroke(255);
+    /*stroke(255);
     ellipse(350, 120, 100, 100);
-    line(10, 100, 200, 200);
+    line(10, 100, 200, 200);*/
     
     if (mouseIsPressed) {
         fill(0);
@@ -58,6 +59,7 @@ function draw() {
     
     //move with the mouse
     ellipse(mouseX, mouseY, 80, 80); 
+    rect(400, 150, 100, 100);
     
     //randomize color
     stroke(randomInt(255), randomInt(255), randomInt(255)); 
@@ -66,7 +68,7 @@ function draw() {
     line(randomInt(width), randomInt(height), randomInt(width), randomInt(height)); 
     
     //beginShape() and endShape() contain vertex() functions (like point) that define all the vertices of a custom polygon
-    //can use endShape(CLOSE) to connect the first and last points if they haven't been explicitly connected using vertex()
+    //can use endShape(CLOSE) to connect the first and last points if they haven't been explicitly connected using vertex()*/
 }
 
 //using a lib doesn't constrain us to just the lib. We can still use all the vanilla JS. And most rely on you knowing how functions, objects, variables, loops and arrays work in vanilla. 
